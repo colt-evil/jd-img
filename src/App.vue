@@ -71,7 +71,7 @@ const ACTION_API = import.meta.env.VITE_IMG_API_URL;
 const fileName = ref('');
 const checkImageSizeFn = (file: any) => {
   fileName.value = file.name
-  const maxSize = 5 * 1024 * 1024;
+  const maxSize = 20 * 1024 * 1024;
   if (file.size > maxSize) {
     Message.error(`图片大小不能超过 ${maxSize / 1024 / 1024}MB`);
     return false;
